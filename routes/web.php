@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+Route::get('/redirect', 'SocialAuthGoogleController@redirect');
+Route::get('/login/google/callback', 'SocialAuthGoogleController@callback');
+
+Route::get('/home', 'HomeController@index')->name('home');
