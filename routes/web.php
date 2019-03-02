@@ -18,5 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 Route::get('/redirect', 'SocialAuthGoogleController@redirect');
 Route::get('/login/google/callback', 'SocialAuthGoogleController@callback');
+Route::get('/contact/import/google', ['as'=>'google.import', 'uses'=>'ContactController@importGoogleContact']);
+
 
 Route::get('/home', 'HomeController@index')->name('home');

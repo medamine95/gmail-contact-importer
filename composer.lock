@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4ab20c329ed44b7db2e97da5fca7d82f",
+    "content-hash": "982c03be85f826302f3585bde0f96b90",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1059,6 +1059,73 @@
             "time": "2016-08-17T00:36:58+00:00"
         },
         {
+            "name": "lusitanian/oauth",
+            "version": "v0.8.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Lusitanian/PHPoAuthLib.git",
+                "reference": "fc11a53db4b66da555a6a11fce294f574a8374f9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Lusitanian/PHPoAuthLib/zipball/fc11a53db4b66da555a6a11fce294f574a8374f9",
+                "reference": "fc11a53db4b66da555a6a11fce294f574a8374f9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*",
+                "predis/predis": "0.8.*@dev",
+                "squizlabs/php_codesniffer": "2.*",
+                "symfony/http-foundation": "~2.1"
+            },
+            "suggest": {
+                "ext-openssl": "Allows for usage of secure connections with the stream-based HTTP client.",
+                "predis/predis": "Allows using the Redis storage backend.",
+                "symfony/http-foundation": "Allows using the Symfony Session storage backend."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "OAuth": "src",
+                    "OAuth\\Unit": "tests"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Desberg",
+                    "email": "david@daviddesberg.com"
+                },
+                {
+                    "name": "Elliot Chance",
+                    "email": "elliotchance@gmail.com"
+                },
+                {
+                    "name": "Pieter Hordijk",
+                    "email": "info@pieterhordijk.com"
+                }
+            ],
+            "description": "PHP 5.3+ oAuth 1/2 Library",
+            "keywords": [
+                "Authentication",
+                "authorization",
+                "oauth",
+                "security"
+            ],
+            "time": "2018-02-14T22:37:14+00:00"
+        },
+        {
             "name": "monolog/monolog",
             "version": "1.24.0",
             "source": {
@@ -1307,6 +1374,69 @@
                 "serialize"
             ],
             "time": "2019-02-22T10:30:00+00:00"
+        },
+        {
+            "name": "oriceon/oauth-5-laravel",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oriceon/oauth-5-laravel.git",
+                "reference": "dda7775a4fc4e7a66921d0a178ccca396c4f04a1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oriceon/oauth-5-laravel/zipball/dda7775a4fc4e7a66921d0a178ccca396c4f04a1",
+                "reference": "dda7775a4fc4e7a66921d0a178ccca396c4f04a1",
+                "shasum": ""
+            },
+            "require": {
+                "lusitanian/oauth": "*",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "illuminate/support": "~5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Artdarek\\OAuth\\OAuthServiceProvider"
+                    ],
+                    "aliases": {
+                        "OAuth": "Artdarek\\OAuth\\Facade\\OAuth"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Artdarek\\OAuth": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Artdarek",
+                    "email": "artdarek@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "oriceon",
+                    "email": "oriceon@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "OAuth Service Provider for Laravel 5",
+            "homepage": "https://github.com/oriceon/oauth-5-laravel",
+            "keywords": [
+                "Lusitanian",
+                "laravel",
+                "oauth",
+                "php"
+            ],
+            "time": "2019-01-18T16:10:24+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -4669,7 +4799,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "oriceon/oauth-5-laravel": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
