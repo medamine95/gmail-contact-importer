@@ -32,7 +32,11 @@ class ContactController extends Controller
             }
         }
 
-       return $emails;
+      // return $emails;
+      return view('result')->with('emails', $emails);
+
+     // return view('home', ["emails"=>$emails]);
+
        // return view('home', $emails);
 
 

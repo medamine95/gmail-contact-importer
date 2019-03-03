@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">Result</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,17 +13,17 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    Hello  {{ Auth::user()->name }}
-                    you are logged in!
+                    {{ Auth::user()->name }} , here is your Gmail Contacts List :
+                    <br> </br>
                     </br>
-                    <div class="form-group row mb-0">
-                        <div class="col-md-8 offset-md-4">
+                        @foreach($emails as $email)
+                        <ul class="list-group">
+                          <li class="list-group-item ">{{$email}} </li>
 
-                            <a href="{{ url('/contact/import/google') }}" class="btn btn-primary">Import Gmail Contacts</a>
-                        </div>
+                        </ul>
+                         @endforeach
                     </div>
-
-
+                    <a href="{{ url('/home') }}" class="btn btn-dark">Back to home</a>
                 </div>
             </div>
         </div>
