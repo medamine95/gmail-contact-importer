@@ -32,7 +32,11 @@ class ContactController extends Controller
             }
         }
 
-        return $emails;
+       return $emails;
+       // return view('home', $emails);
+
+
+
 
     }
 
