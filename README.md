@@ -1,9 +1,9 @@
 # gmail-contact-importer
 
-To Test :
-import laraveldb.sql into your Database
-edit .env file to match your db settings if needed 
-composer install
-npm install 
-main console : php artisan serve
-in another console : npm run watch 
+To Test : <br/>
+import laraveldb.sql into your Database <br/>
+edit .env file to match your db settings if needed <br/>
+composer install <br/>
+npm install <br/>
+main console : php artisan serve <br/>
+in another console : npm run watch <br/>
