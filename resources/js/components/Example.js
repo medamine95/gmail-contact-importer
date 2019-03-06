@@ -1,19 +1,39 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import axios from 'axios';
 
 export default class Example extends Component {
+
+    constructor(){
+
+        super();
+        this.state={
+            persons:'',
+            output:[]
+        }
+    }
+
+    componentDidMount(){
+        axios.get('/postdata').then(response=>
+            {
+        this.setState({persons:response.data});
+        const itemsArray = this.state.persons.split(',');
+        this.setState({
+            output:itemsArray
+        });
+    });
+
+}
     render() {
+
         return (
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-md-8">
-                        <div className="card">
-                            <div className="card-header">Example Component</div>
+                            <ul className="list-group">{this.state.output.map(item=>(
+                                <li className="list-group-item" key={item}>{item}</li>
+                            ))}</ul>
 
-                            <div className="card-body">
-                                I'm an example component!
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

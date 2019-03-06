@@ -52,7 +52,6 @@ class ContactController extends Controller
 
 
 
-
     }
 
     // if not ask for permission first

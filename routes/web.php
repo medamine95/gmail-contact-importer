@@ -18,6 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 Route::get('/redirect', 'SocialAuthGoogleController@redirect');
 Route::get('/login/google/callback', 'SocialAuthGoogleController@callback');
+Route::get('/postdata','PostDataController@getData');
 Route::get('/contact/import/google', ['as'=>'google.import', 'uses'=>'ContactController@importGoogleContact']);
 
 
